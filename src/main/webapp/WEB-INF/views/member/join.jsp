@@ -13,7 +13,7 @@
 </head>
 <body>
 <section class="container-fluid col-lg-10 mt-5">
-	<h1>회원가입 페이지</h1>
+	<h1>회원가입 페이지</h1>		<br>
 
 	<form:form modelAttribute="memberVO" action="add" method="post">
 
@@ -63,32 +63,13 @@
 			<span id="emailHelp"></span>
 		  </div>
 		  
-		  <div class="mb-3">
-		    <label for="inputAge" class="form-label">나이</label>
-		    <form:input path="age" cssClass="form-control" id="inputAge"/>
-		    <!-- <input type="text" class="form-control" id="inputEmail" name="email" placeholder="이메일을 입력하세요"> -->
-		    <form:errors path="age"></form:errors>
-		  </div>
-		  
-		  
-		  <div class="mb-3">
-		    <label for="inputBirth" class="form-label">birth</label>
-		    <form:input path="birth" cssClass="form-control" id="inputBirth"/>
-		    <!-- <input type="text" class="form-control" id="inputEmail" name="email" placeholder="이메일을 입력하세요"> -->
-		    <form:errors path="birth"></form:errors>
-		  </div>
 		
-		  <button type="submit" id="joinBtn" class="btn btn-primary">회원가입</button>
-		  
+			<div style="display: inline-block; margin: 0 5px;  float: right;">
+		  		<button type="submit" id="joinBtn" class="btn btn-primary">회원가입</button>
+		  	</div>
 
 	</form:form>
-		<div>
-			<select id="s1">
-			   <option>1</option>
-			   <option>2</option>
-			</select>
-			<button type="button" id="s1Add">Add</button>
-		 </div>
+	
 	 
 	 </section>
 
