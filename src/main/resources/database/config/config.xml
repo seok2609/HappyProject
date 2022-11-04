@@ -11,6 +11,8 @@
 	
 		<typeAlias type="com.js.home.notice.NoticeVO" alias="NoticeVO"/>
 		<typeAlias type="com.js.home.notice.NoticeFileVO" alias="NoticeFileVO"/>
+		<typeAlias type="com.js.home.member.MemberVO" alias="MemberVO"/>
+		<typeAlias type="com.js.home.member.RoleVO" alias="RoleVO"/>
 		
 		
 		

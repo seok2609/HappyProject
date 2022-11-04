@@ -7,4 +7,33 @@
 <mapper namespace="com.js.home.member.MemberMapper">
 
 
+	<select id="getMemberLogin" parameterType="String" resultMap="getMemberLoginResult">
+		SELECT * FROM 
+		MEMBER M
+			LEFT JOIN
+		MEMBER_ROLE1 MR
+			ON M.ID = MR.ID
+			LEFT JOIN 
+		ROLE R 
+			ON MR.NUM = R.NUM
+		WHERE M.ID = #{username}
+	</select>
+	
+	<resultMap type="MemberVO" id="getMemberLoginResult">
+		<id column="id" property="id"/>
+		<result column="pw" property="pw"/>
+		<result column="name" property="name"/>
+		<result column="email" property="email"/>
+		
+		<collection property="roleVOs" javaType="List" ofType="RoleVO">
+			<id column="num" property="num"/>
+			<result column="roleName" property="roleName"/>
+		</collection>
+	</resultMap>
+	
+	<insert id="setMemberJoin" parameterType="MemberVO">
+		INSERT INTO MEMBER VALUES (#{id}, #{pw}, #{name}, #{email}, 1)
+	</insert>
+	
+
 </mapper>
